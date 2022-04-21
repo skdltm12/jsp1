@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <%
 String[] dp1 = {"회사소개","제품소개","보유설비","고객지원"};
 String[][] dp2 = {{"인사말","연혁","보유인증","오시는 길"},
@@ -12,12 +13,13 @@ String[][] lnk = {{"intro/sub01/01_01.jsp","intro/sub01/02_01.jsp","intro/sub01/
 		{"sub03/01_01.jsp","sub03/02_01.jsp","sub03/03_01.jsp"},
 		{"sub04/01_01.jsp","sub04/02_01.jsp"}};
 %>
+<a href="index.jsp"><img src="./img/logo.jpg" alt="로고"></a>
 <nav id="gnb">
-<ul>
+<ul >
 <%
 	for(int i=0;i<dp1.length;i++){
 %>
-<li>
+<li >
 	<span class="dp1"><%=dp1[i] %></span>
 	<ul class="sub">
 <%
@@ -34,3 +36,21 @@ String[][] lnk = {{"intro/sub01/01_01.jsp","intro/sub01/02_01.jsp","intro/sub01/
 %>
 </ul>
 </nav>
+                <p id="tnb">
+                <%
+                String sid = (String)session.getAttribute("uid");
+                String sname = (String)session.getAttribute("name");
+                if(sid==null){
+                %>
+               <a href="login.jsp">로그인</a>
+               <a href="">손님</a>
+                <%
+                }else{
+                %>
+                <a href="logout.jsp">로그아웃</a>
+                <a href=""><%=sname %></a>   
+                <%
+                }
+                %>                        
+                    <a href="">ENG</a>
+                    <a href="">오시는 길</a></p>

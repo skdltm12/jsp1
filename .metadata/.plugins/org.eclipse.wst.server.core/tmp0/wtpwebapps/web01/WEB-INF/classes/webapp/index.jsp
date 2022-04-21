@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>서버 페이지 테스트</title>
+<title>메인페이지</title>
 <link rel="stylesheet" href="">
 </head>
 <body>
@@ -21,7 +21,7 @@
 	<h2>콘텐츠 영역</h2>
 </div>
 <footer id="ft">
-	<h2>푸터 영역</h2>
+	<%@ include file="ft.jsp" %>
 </footer>
 </div>
 </body>
