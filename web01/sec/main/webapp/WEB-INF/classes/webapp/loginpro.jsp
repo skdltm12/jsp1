@@ -1,56 +1,48 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%
- 	request.setCharacterEncoding("UTF-8");
- 	String uid = request.getParameter("uid");
- 	String upw = request.getParameter("upw");
- 
- %>
-    <%-- <%@ 디렉티브 %> --%>
-    <%	/*스크립트릿(scriptlet)*/ %>
-    <%--  <%=표현식 %> --%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>로그인 페이지</title>
-<link rel="stylesheet" href="">
-</head>
-<body>
-<div class="wrap">
-<header id="hd">
-	<div class="hd_wrap">
+<%@ page import="java.sql.*" %>
+<%
+	request.setCharacterEncoding("UTF-8");
+	String uid = request.getParameter("uid"); //파라미터명은 요청 페이지의 name과 일치
+	String upw = request.getParameter("upw"); //파라미터명은 요청 페이지의 name과 일치
 
-	<%@ include file="nav.jsp" %>
-	</div>
-</header>
-<div class="content">
-	<h2>로그인 정보</h2>
-	<form id="frm1" name="login">
-		<ul>
-			<li>아이디 정보 : <%=uid %></li>
-			<li>비밀번호 정보 : <%=upw %></li>
-		<%
-		if(uid.equals("ysw") && upw.equals("1234")){
-			session.setAttribute("uid", uid);
-			session.setAttribute("name", "바보");
-			response.sendRedirect("index.jsp");
-		} else if(uid.equals("admin") && upw.equals("1234")){
-			session.setAttribute("uid", uid);
-			session.setAttribute("name", "관리자");
-			response.sendRedirect("index.jsp");
-		}else {
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+	
+	try {
+		Class.forName("org.mariadb.jdbc.Driver");
+		conn = DriverManager.getConnection("jdbc:mariadb://localhost:3308/company","root","1234!");
+		String sql = "select * from member where id=?";
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, uid);
+		rs = pstmt.executeQuery();
+		if(rs.next()) {  //회원아이디가 있는 경우
+			String id = rs.getString("id");
+			String pw = rs.getString("pw");
+			String name = rs.getString("name");
+			if(upw.equals(pw) || upw==pw){ //로그인 성공
+				session.setAttribute("uid", id);
+				session.setAttribute("name", name);
+				response.sendRedirect("index.jsp");
+			} else {
+				//비밀번호가 틀렸을 경우
+				response.sendRedirect("login.jsp");
+			}
+		} else {
+			//입력한 아이디가 회원가입이 되어 있지 않은 경우(member 테이블에 해당 id가 존재하지 않음)
 			response.sendRedirect("login.jsp");
 		}
-		%>
-			<!-- <input type="reset" value="취소" id="reset" class="btn"> -->
-		
-		</ul>
-	</form>
-</div>
-<footer id="ft">
-	<%@ include file="ft.jsp" %>
-</footer>
-</div>
-</body>
-</html>
+	} catch(Exception e){
+		response.sendRedirect("login.jsp");
+		e.printStackTrace();	
+	} finally {
+		try {
+			rs.close();
+			pstmt.close();
+			conn.close();
+		} catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+%>	

@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%-- <%@ 디렉티브 %> --%>
+    <%	/*스크립트릿(scriptlet)*/ %>
+    <%--  <%=표현식 %> --%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 페이지</title>
+<link rel="stylesheet" href="">
+</head>
+<body>
+<div class="wrap">
+<header id="hd">
+	<div class="hd_wrap">
+	<%@ include file="nav.jsp" %>
+	</div>
+</header>
+<div class="content" class="panel-class">
+	<table>
+	
+	</table>
+	<%
+	Connection conn = null;	//연결 정보를 저장하고, 연결할 객체
+	Statement stmt = null;	//연결 상태를 유지할 객체
+	ResultSet result = null; 	//불어온 DB결과를 저장할 곳
+	try {
+		/* 드라이버로딩 = jdbc:mariadb://localhost:포트번호/데이터베이스명 */
+		Class.forName("org.mysql.jdbc.Driver");
+		String driver = "jdbc:mysql://localhost:3308/company";
+		String dbId = "root";
+		String dpPw = "1234";
+		conn = DriverManager.getConnection(driver, dbId, dpPw);
+		stmt = conn.createStatement();
+		
+		String sql = "select * from member";
+		result = stmt.executeQuery(sql);%>
+	
+	<h2>로그인</h2>
+	<form id="frm1" name="login" action="loginpro.jsp" method="post">
+		<ul>
+			<li><input type="text" class="indata" id="uid" name="uid" placeholder="아이디 입력"
+			required autofocus></li>
+			<li><input type="password" class="indata" id="upw" name="upw" placeholder="비밀번호 입력"
+			required ></li>
+			<li class="btn_frame">
+			<input type="submit" value="로그인" id="submit" class="btn">
+			<input type="reset" value="취소" id="reset" class="btn">
+			</li>
+		</ul>
+	</form>
+</div>
+<footer id="ft">
+	<%@ include file="ft.jsp" %>
+</footer>
+</div>
+</body>
+</html>
