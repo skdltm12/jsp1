@@ -44,6 +44,7 @@ String[][] lnk = {{"intro/sub01/01_01.jsp","intro/sub01/02_01.jsp","intro/sub01/
                 %>
                <a href="login.jsp">로그인</a>
                <a href="">손님</a>
+               <a href="agree.jsp">회원가입</a>
                 <%
                 }else{
                 %>
@@ -53,6 +54,23 @@ String[][] lnk = {{"intro/sub01/01_01.jsp","intro/sub01/02_01.jsp","intro/sub01/
                 <%
                 }
                 %>                        
-                    <a href="">ENG</a>
+                    <a href="">상단메뉴</a>
                     <a href="memberList.jsp">회원목록</a>
-                    <a href="">오시는 길</a></p>
+                    <a href="">오시는 길</a>
+					<span id="msg_a"></span>
+</p>
+<script>
+	//주소 입력줄로 받은 msg를 받아 출력하는 부분임
+	var url = location.href;  //url입력줄의 메시지를 포함한 주소를 저장
+	var pos = url.indexOf("?msg=");
+	var msg = url.substr(pos+5); //메시지만 추출
+	//msg_a.innerHTML = decodeURI(msg);
+	if(pos>0) {
+		if(msg!=""){
+			alert(msg);
+			var msg_a = document.getElementById("msg_a"); //해당 msg_a 아이디 요소 선택
+			msg_a.innerHTML = msg;
+		}
+	}
+	
+</script>
