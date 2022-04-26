@@ -30,20 +30,20 @@
 		<table>
 			<tr>
 				<td>이름 : </td>
-				<td><input type="text" id="name" name="name" placeholder="이름 입력" autofocus></td>
+				<td><input type="text" id="name" name="name" placeholder="이름 입력" autofocus required></td>
 			</tr>
 			<tr>
 				<td>아이디 : </td>
-				<td><input type="text" id="uid" name="uid" placeholder="아이디 입력"></td>
+				<td><input type="text" id="uid" name="uid" placeholder="아이디 입력" required></td>
 				<td><button onclick="window.open('pop.jsp','아이디 중복 확인','width=500,height=500')">아이디 중복 확인</button></td>
 			</tr>
 			<tr>
 				<td>비밀번호 : </td>
-				<td><input type="text" id="upw" name="upw" placeholder="비밀번호 입력"></td>				
+				<td><input type="text" id="upw" name="upw" placeholder="비밀번호 입력" required></td>				
 			</tr>
 			<tr>
 				<td>비밀번호 확인 : </td>
-				<td><input type="text" id="upw" name="upw" placeholder="비밀번호 확인"></td>
+				<td><input type="text" id="upw" name="upw" placeholder="비밀번호 확인" required></td>
 			</tr>
 			<tr>
 				<td>주소 : </td>

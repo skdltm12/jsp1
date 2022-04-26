@@ -1,5 +1,3 @@
 INDEX VERSION 1.131
-D:\yeo\jps1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3586485736.index
-\web01\src\main\java
-D:\yeo\jps1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3557307777.index
-\web01\src\main\java
+C:\sw\jps1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3557307777.index
+\web01\src\main
