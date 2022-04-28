@@ -27,7 +27,7 @@
 	function invalidCheck(f){
 		var id = f.id.value;
 		id = id.trim();
-		if(id.length<8 || id.length>12){
+		if(id.length<8 || id.length>12){ 
 			alert("아이디의 글자수는 8~12자 내여야 합니다.")
 			return false;
 		}

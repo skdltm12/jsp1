@@ -10,7 +10,7 @@
 <body>
 <%
 	request.setCharacterEncoding("UTF-8");
-	String uid = request.getParameter("uid");
+	String id = request.getParameter("id");
 	Connection conn=null;
 	PreparedStatement pstmt=null;
 	ResultSet rs = null;
@@ -18,13 +18,13 @@
 		Class.forName("org.mariadb.jdbc.Driver");
 		conn = DriverManager.getConnection("jdbc:mariadb://localhost:3308/company","root","1234!");
 		pstmt = conn.prepareStatement("select * from member where id=?");
-		pstmt.setString(1, uid);
+		pstmt.setString(1, id);
 		rs = pstmt.executeQuery();
 		if(rs.next()){
 			out.println("<p>중복된 아이디 입니다.</p>");
 		}else{
 			out.println("<p>사용할 수 있는 아이디 입니다.</p>");
-			out.println("<a href='javascript:apply(\""+uid+"\")'>"+uid+"[적용]</a>");
+			out.println("<a href='javascript:apply(\""+id+"\")'>"+id+"[적용]</a>");			
 			out.println("<p>[적용]을 누르시면 해당 아이디를 사용합니다.</p>");
 %>
 <script>

@@ -11,7 +11,7 @@
 <body>
 <div>
 	<h2>회원가입</h2>
-	<form action="joinPro.jsp" method="post">
+	<form action="joinPro.jsp" method="post" name="joinform" onsubmit="return joincheck(this)">
 		<table>
 			<tbody>
 			<tr>
@@ -20,17 +20,19 @@
 			</tr>
 			<tr>
 				<td>아이디 : </td>
-				<td><input type="text" id="uid" name="uid" placeholder="아이디 입력" value="" required></td>
-				<td><input type="hidden" id="idck" name="idck" value=""></td>
-				<td><button onclick="idCheck()">아이디 중복 확인</button></td>
+				<td>
+					<input type="text" id="uid" name="uid" placeholder="아이디 입력" value="" required>
+					<input type="hidden" id="idck" name="idck" value="">
+					<input type="button" onclick="idCheck()" value="아이디 중복 확인">
+				</td>
 			</tr>
 			<tr>
 				<td>비밀번호 : </td>
-				<td><input type="password" id="upw" name="upw" placeholder="비밀번호 입력" required></td>				
+				<td><input type="password" id="upw" name="upw" placeholder="비밀번호 입력" value="" required></td>				
 			</tr>
 			<tr>
 				<td>비밀번호 확인 : </td>
-				<td><input type="password" id="upw" name="upw" placeholder="비밀번호 확인" required></td>
+				<td><input type="password" id="upw2" name="upw2" placeholder="비밀번호 확인" value="" required></td>
 			</tr>
 			<tr>
 				<td>주소 : </td>
@@ -52,6 +54,16 @@
 		<script>
 		function idCheck(){
 			window.open('pop.jsp','아이디 중복 확인','width=500,height=500');
+		}
+		function joincheck(f){
+			if(f.idck.value!="yes"){
+				alert("아이디 중복 확인을 해야합니다.");
+				return false;
+			}
+			if(f.upw.value!=f.upw2.value){
+				alert("비밀번호 확인이 일치하지 않습니다." );
+				return false;
+			}
 		}
 		</script>
 	</form>
