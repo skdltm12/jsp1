@@ -5,11 +5,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="datatables.min.js"></script>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>개인정보 처리방침 및 이용 약관</title>
 </head>
 <body>
 <h2>개인정보 처리방침 및 이용 약관</h2>
+	<div>
 	<table>
 		<tbody>
 			<tr>
@@ -82,7 +90,7 @@
 				</textarea></td>
 			</tr>
 			<tr>
-				<td id='checkbox'>동의<input type="checkbox"></td>
+				<td style="float:right">동의<input type="checkbox" name="ck1" id="ck1"></td>
 			</tr>
 			<tr>
 			<td>개인정보 이용약관<br>
@@ -228,19 +236,32 @@
 			</td>
 			</tr>
 						<tr>
-				<td id='checkbox'>동의<input type="checkbox"></td>
+				<td id='checkbox' style="float:right">동의<input type="checkbox" name="ck2" id="ck2"></td>
 			</tr>
 			<%
 		
 			%>
 			<tr>
 				<td colspan="2">
-					<input type="submit" value="가입" onclick="location.href='join.jsp'"> &nbsp;&nbsp;
-					<input type="button" value="취소" onclick="location.href='index.jsp'">
+					<input value="가입" onclick="fnc1()" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input value="취소" onclick="location.href='index.jsp'" class="btn btn-primary">
 				</td>
 			</tr>
 		</tbody>
 	</table>
-
+	<script>
+		function fnc1(){
+			var ck1 = document.getElementById("ck1");
+			var ck2 = document.getElementById("ck2");
+			if(ck1.checked && ck2.checked){
+				location.href="join.jsp";
+				return false;
+			}else{
+				alert("약관에 동의하지 않았습니다.");
+				return false;
+			}
+		}
+	</script>
+</div>
 </body>
 </html>

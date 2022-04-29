@@ -5,6 +5,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="datatables.min.js"></script>
 <meta charset="UTF-8">
 <title>개인정보 처리방침 및 이용 약관</title>
 </head>
@@ -236,8 +243,8 @@
 			%>
 			<tr>
 				<td colspan="2">
-					<button onclick="fnc1()">가입</button>&nbsp;&nbsp;
-					<input type="button" value="취소" onclick="location.href='index.jsp'">
+					<input value="가입" onclick="fnc1()" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input value="취소" onclick="location.href='index.jsp'" class="btn btn-primary">
 				</td>
 			</tr>
 		</tbody>

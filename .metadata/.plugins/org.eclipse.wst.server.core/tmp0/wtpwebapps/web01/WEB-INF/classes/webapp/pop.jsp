@@ -9,41 +9,12 @@
 </head>
 <body>
 <h2>아이디 중복 확인</h2>
-<%
-Connection conn=null;
-PreparedStatement pstmt=null;
-ResultSet rs=null;
-String msg=null;
-
-try{
-	Class.forName ("org.mariadb.jdbc.Driver");
-	conn = DriverManager.getConnection("jdbc:mariadb://localhost:3308/company","root","1234!");
-	pstmt = conn.prepareStatement("select * from member id=?");
-	pstmt.setString(1,"qid");
-	rs = pstmt.executeQuery();
-	if(rs==null){
-		//아이디가 중복되지 않을경우
-	} else {
-		msg="중복된 아이디 입니다. 다른 아이디를 사용해주세요";
-	}
-}catch(Exception e){
-e.printStackTrace();
-}finally{
-	try{
-		rs.close();
-		pstmt.close();
-		conn.close();
-	}catch(Exception e){
-	e.printStackTrace();
-	}
-};
-%>
-	<form action=".jsp" method="post" >
+	<form action="idcheck.jsp" method="post" onsubmit="return invalidCheck(this)" >
 		<table>
 			<tbody>
 				<tr>
-					<td><input type="text" id="id" name="qid"></td>
-					<td><button>아이디 중복 확인</button></td>
+					<td><input type="text" id="id" name="id" required autofocus></td>
+					<td><input type="submit" value="중복 확인"></td>
 				</tr>
 				<tr>
 					<td>
@@ -52,6 +23,15 @@ e.printStackTrace();
 			</tbody>
 		</table>
 	</form>
-
+	<script>
+	function invalidCheck(f){
+		var id = f.id.value;
+		id = id.trim();
+		if(id.length<8 || id.length>12){ 
+			alert("아이디의 글자수는 8~12자 내여야 합니다.")
+			return false;
+		}
+	}
+	</script>
 </body>
 </html>

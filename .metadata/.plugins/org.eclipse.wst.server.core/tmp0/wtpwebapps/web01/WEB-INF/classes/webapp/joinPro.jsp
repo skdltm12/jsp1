@@ -16,12 +16,41 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>테스트</h2>
+
+<%
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	int cnt =0;
+	try{
+		Class.forName("org.mariadb.jdbc.Driver");
+		conn = DriverManager.getConnection("jdbc:mariadb://localhost:3308/company","root","1234!");
+		String sql = "insert into member (name,id,pw,phone,address) values(?,?,?,?,?)";
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, name);
+		pstmt.setString(2, uid);
+		pstmt.setString(3, upw);
+		pstmt.setString(4, phone);
+		pstmt.setString(5, address);
+		cnt = pstmt.executeUpdate();
+		if(cnt>0){
+			response.sendRedirect("login.jsp");
+		}else{
+			response.sendRedirect("join.jsp");
+		}
+	}catch(Exception e){
+	 e.printStackTrace();
+	}finally{                                                                                                                   
+		try{
+			pstmt.close();
+			conn.close();
+		}catch(Exception e){
+		 e.printStackTrace();
+		}
+	}
+%>
 <table>
 	<tbody>
 		<tr>
-			<td>이름:</td>
-			<td><%= name %></td>
 		</tr>
 	</tbody>
 </table>

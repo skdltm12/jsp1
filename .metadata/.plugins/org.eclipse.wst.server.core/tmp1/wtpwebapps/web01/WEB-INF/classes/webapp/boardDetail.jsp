@@ -14,15 +14,14 @@
 	request.setCharacterEncoding("UTF-8");
 	Connection conn = null;
 	PreparedStatement pstmt=null;
-	ResultSet rs=null;
-	int cnt = 0;
+	ResultSet rs = null;
 	
 	try{
 		Class.forName("org:mariadb.jdbc.Driver");
 		conn = DriverManager.getConnection("jdbc:mariadb://localhost:3308/company","root","1234!");
-		String sql = "select * from board where bno='?'";
+		String sql = "select * from board where bno=?";
 		pstmt= conn.prepareStatement(sql);
-		pstmt.setString(1, "bno");		
+		pstmt.setString(1, "1");		
 		rs=pstmt.executeQuery();
 		
 	}catch(Exception e){

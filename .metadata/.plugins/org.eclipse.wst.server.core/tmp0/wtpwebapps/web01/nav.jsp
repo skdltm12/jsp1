@@ -51,10 +51,12 @@ String[][] lnk = {{"intro/sub01/01_01.jsp","intro/sub01/02_01.jsp","intro/sub01/
                 <a href="logout.jsp">로그아웃</a>
                 <a href="mypage.jsp"><%=sname %></a> 
                 <a href="">오시는 길</a>
+                <a href="board1.jsp">게시판</a>
+              
                 <%
                 }else{
                 %>                        
-                    <a href="boardList.jsp">게시판관리</a>
+                    <a href="board1.jsp">게시판관리</a>
                     <a href="memberList.jsp">회원목록</a>
                     <a href="">오시는 길</a>
                     <a href="logout.jsp">로그아웃</a>
