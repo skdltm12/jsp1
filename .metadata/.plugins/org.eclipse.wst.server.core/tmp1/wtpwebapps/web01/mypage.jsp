@@ -20,6 +20,7 @@
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
+
 	try {
 		Class.forName("org.mariadb.jdbc.Driver");
 		conn = DriverManager.getConnection("jdbc:mariadb://localhost:3308/company", "root", "1234!");
@@ -55,9 +56,17 @@
 						 <tr>
 						 	<td colspan="2">
 						 		<input type="submit" value="정보변경"/> &nbsp; &nbsp; &nbsp;&nbsp;
-						 		<input type="reset" value="취소"/>
+						 		<input type="reset" value="취소"/>						 		
 						 	</td>
-						 </tr>
+						</tr>
+<%
+	if(!sid.equals("admin")){
+%>
+							<tr><td><a href="secession.jsp"><input type="button" value="회원탈퇴"></a><td><tr>
+<%
+	}
+%> 
+
 					</tbody>
 				</table>
 			</form>

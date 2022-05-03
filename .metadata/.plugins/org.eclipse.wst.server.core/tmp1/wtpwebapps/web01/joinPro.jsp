@@ -9,6 +9,17 @@
 	String address = request.getParameter("address");
 	String phone = request.getParameter("phone");
 %>
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+>>>>>>> 3c83255d07ad55ecc155e21364ba1bab825f4b59
 <%
 	Connection conn = null;
 	PreparedStatement pstmt = null;
@@ -16,11 +27,19 @@
 	try{
 		Class.forName("org.mariadb.jdbc.Driver");
 		conn = DriverManager.getConnection("jdbc:mariadb://localhost:3308/company","root","1234!");
+<<<<<<< HEAD
 		String sql = "insert into member (id,pw,name,phone,address) values(?,?,?,?,?)";
 		pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, uid);
 		pstmt.setString(2, upw);
 		pstmt.setString(3, name);
+=======
+		String sql = "insert into member (name,id,pw,phone,address) values(?,?,?,?,?)";
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, name);
+		pstmt.setString(2, uid);
+		pstmt.setString(3, upw);
+>>>>>>> 3c83255d07ad55ecc155e21364ba1bab825f4b59
 		pstmt.setString(4, phone);
 		pstmt.setString(5, address);
 		cnt = pstmt.executeUpdate();
@@ -40,3 +59,16 @@
 		}
 	}
 %>
+<<<<<<< HEAD
+=======
+<table>
+	<tbody>
+		<tr>
+		</tr>
+	</tbody>
+</table>
+
+
+</body>
+</html>
+>>>>>>> 3c83255d07ad55ecc155e21364ba1bab825f4b59
