@@ -9,23 +9,34 @@
 	String address = request.getParameter("address");
 	String phone = request.getParameter("phone");
 %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<h2>테스트</h2>
-<table>
-	<tbody>
-		<tr>
-			<td>이름:</td>
-			<td><%= name %></td>
-		</tr>
-	</tbody>
-</table>
-
-
-</body>
-</html>
+<%
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	int cnt =0;
+	try{
+		Class.forName("org.mariadb.jdbc.Driver");
+		conn = DriverManager.getConnection("jdbc:mariadb://localhost:3308/company","root","1234!");
+		String sql = "insert into member (id,pw,name,phone,address) values(?,?,?,?,?)";
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, uid);
+		pstmt.setString(2, upw);
+		pstmt.setString(3, name);
+		pstmt.setString(4, phone);
+		pstmt.setString(5, address);
+		cnt = pstmt.executeUpdate();
+		if(cnt>0){
+			response.sendRedirect("login.jsp");
+		}else{
+			response.sendRedirect("join.jsp");
+		}
+	}catch(Exception e){
+	 e.printStackTrace();
+	}finally{                                                                                                                   
+		try{
+			pstmt.close();
+			conn.close();
+		}catch(Exception e){
+		 e.printStackTrace();
+		}
+	}
+%>

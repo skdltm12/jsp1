@@ -9,35 +9,6 @@
 </head>
 <body>
 <h2>아이디 중복 확인</h2>
-<%
-Connection conn=null;
-PreparedStatement pstmt=null;
-ResultSet rs=null;
-String msg=null;
-
-try{
-	Class.forName ("org.mariadb.jdbc.Driver");
-	conn = DriverManager.getConnection("jdbc:mariadb://localhost:3308/company","root","1234!");
-	pstmt = conn.prepareStatement("select * from member id=?");
-	//pstmt.setString();
-	rs = pstmt.executeQuery();
-	if(rs==null){
-
-	} else {
-
-	}
-}catch(Exception e){
-e.printStackTrace();
-}finally{
-	try{
-		rs.close();
-		pstmt.close();
-		conn.close();
-	}catch(Exception e){
-	e.printStackTrace();
-	}
-};
-%>
 	<form action="idcheck.jsp" method="post" onsubmit="return invalidCheck(this)" >
 		<table>
 			<tbody>

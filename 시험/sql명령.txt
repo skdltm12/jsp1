@@ -1,0 +1,19 @@
+-- 사용자 목록 조회(사용자 추가/삭제 후 반드시 실행해봄)
+select username from ALL_USERS;
+
+-- 사용자 목록 조회( dba권한을 갖는 사용자만)
+select * from dba_users;
+select username, password from dba_users;
+
+-- 현재 계정의 사용가능한 테이블 목록 보기
+select * from tab where tname not like '%BIN%';
+select TABLE_NAME from all_tables where owner='SCOTT';
+
+-- 테이블 구조 보기
+desc employees;
+
+-- 현재 계정의 사용자가 소유 중인 테이블/뷰 목록 보기
+select TABLE_NAME from USER_TABLES;
+
+-- 현재 계정의 사용자에 대한 시스템 권한 확인
+select * from DBA_SYS_PRIVS where GRANTEE='SCOTT';
