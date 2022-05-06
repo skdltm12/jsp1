@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습4 - 순서위치 선택자</title>
+    <style>
+        li:nth-child(2) a { color:chartreuse} /*특정 번째 선택*/
+        li:nth-child(2n) a { border: radius 30px; border: 3px solid black} /*짝수 번째 선택*/
+        li:nth-child(2n+1) a {} /*홀수 번째 선택*/
+        li:first-child a { color:red } /*최초요소선택*/
+        li:last-child a { color:skyblue } /*최종요소 선택*/
+        li:only-child a { color:yellow } /*단일(독자) 요소 선택*/
+        li:empty { background-color:deeppink; width:200px; height: 40px;}/*자식이없는 요소 선택*/
+
+        ul:nth-of-type(3) li a { font-size: 24px;} /* ul요소중에 세번째의 li안에 a요소를 선택 */
+        ul:nth-child(3) li a { letter-spacing:20px; } /* 세번째 요소가 ul인 ~ */
+
+        li:first-of-type { } 
+        li:first-child { }  
+        li:only-of-type { }
+
+    </style>
+</head>
+<body>
+    <ul class="lst">
+        <li><a href="">메뉴11</a></li>
+        <li><a href="">메뉴12</a></li>
+        <li><a href="">메뉴13</a></li>
+        <li><a href="">메뉴14</a></li>
+        <li></li>
+    </ul>
+    <ul class="lst">
+        <li><a href="">메뉴21</a></li>
+        <li><a href="">메뉴22</a></li>
+        <li>메뉴23</li>
+        <li><a href="">메뉴24</a></li>
+    </ul>
+    <ul class="lst">
+        <li><a href="">메뉴01</a></li>
+        <li>메뉴02</li>
+        <li><a href="">메뉴03</a></li>     
+    </ul>   
+    <ul class="lst">
+        <li><a href="">메뉴31</a></li>
+        <li>메뉴32</li>
+        <li><a href="">메뉴33</a></li>     
+    </ul>   
+    <ul class="lst">
+        <li><a href=""></a>메뉴41</li>
+    </ul>
+</body>
+</html>

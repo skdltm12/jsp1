@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습13 - 배치관련속성</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body, html {width:100%;}
+        a {text-decoration:none;}
+
+        .gnb a { display: block; width: 25%; float:left; text-align:center;
+        height:40px; background-color: deeppink; color:white; line-height: 40px;}
+        .con { height: 1600px; background-color:#eee;}
+        .ft {height: 120px; text-align: center; line-height:120px;}
+        .hd { position:absolute; width:100%; top:50px; left:0;}
+        /*
+        position : static - 그대로 쌓이는 배치 방식 -> margin, float
+                absolute - 절대좌표값을 지정하는 배치 방식 -> top/bottom, left/right, zindex
+                fixed - 좌표값을 활용하여 화면에 고정시키는 배치 방식 -> top/bottom, left/right, zindex
+                relative - 상대적 좌표를 지정하는 방식으로 이전 요소를 기준으로 어디에
+                놓여지게 할것인지 정하는 배치 방식
+        */
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="hd">
+        <nav class="gnb">
+<a href="">메뉴1</a><a href="">메뉴2</a>
+<a href="">메뉴3</a><a href="">메뉴4</a>
+
+        </nav>
+    </header>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습5 - 계층구조 선택자</title>
+    <style>
+    .menu > p > a { color:red; font-size:24px;} /*부모 > 자식*/
+    .menu p a { font-size:24px; } /*조상 후손 */
+    a + a { letter-spacing: 50px; display:block; } /*형+아우 : 형 바로 다음에 나오는 아우 요소를 선택*/
+    a ~ a { background-color: yellow; display:block;} /*형~아우들 : 동생요소는 모두선택 */
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <p>  <!-- div의 자식 : div > p -->
+            <a href="">네이버</a> <!--p의 자식 : div > p > a-->
+            <a href="">와이어샤크</a>
+            <span> <!-- p의 자식 div > p > span -->
+                <a href="">다음</a> <!-- span의 자식 div > p > span > a-->
+            </span>
+            <a href="">스카우터</a>
+        </p>
+        <nav>
+            <a href="">김준호</a> <!--div > nav > a-->
+            <p><!--div>nav>p-->
+                <a href="">구글</a><br>
+            <span><a href="">NCS</a></span>
+            </p>
+        </nav>
+    </div>
+</body>
+</html>

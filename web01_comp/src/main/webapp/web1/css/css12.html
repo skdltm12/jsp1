@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습12 - 표시 및 크기속성</title>
+    <style>
+    div { width: 200px; height: 300px; background-color: yellow;}
+    .a {visibility: hidden; visibility: visible;}
+    .c {display:none; display:inline;}
+    span { /*display: block;*/ width:200px; height:300; background-color: aqua;}
+    .box {width:500px; height: 300px; margin:50px; padding:20px; background-color:red;
+    border: 5px solid navy;}
+    </style>
+</head>
+<body>
+    <div class="a">박스1</div>
+    <span class="b">박스2</span>
+    <div class="c">박스3</div>
+    <span class="d">박스4</span>
+    <nav class="box">박스5</nav>
+    <h2>display : 출력 방식</h2>
+    <p>none, block, inline, inline-block</p>
+    <p>none : 출력 안됨</p>
+    <p>block : 크기지정, 위/아래 마진, 위/아래 패딩 등이 적용됨</p>
+    <p>inline : 크기지정, 위/아래 마진, 위/아래 패딩 등이 적용되지 못하지만 한 줄로 나열</p>
+    <p>inline-block : block과 inline의 특성을 모두 가짐<br>
+        크기지정, 위/아래 마진, 위/아리 패딩 등이 적용되며, 한 줄로 나열 가능함.
+   </p>
+   <hr>
+   <h2>visibility : 가시성</h2>
+   <p>visible, hidden</p>
+   <hr>
+   <h2>opacity : 불투명도</h2>
+   <p>0~1</p>
+   <hr>
+   <h2>크기지정과 관련한 속성</h2>
+   <p>실제 폭 = ml+bl+pl+w+pr+br+mr</p>
+   <p>실제 높이 = mt+bt+pt+h+pb+bb+mb</p>
+   <h3>width:너비, height:높이</h3>
+   <p>px단위, %단위, auto, vw, vh 지정 가능</p>
+   <h3>margin:바깥여백, padding:안여백</h3>
+   <p>px단위, %단위, auto, vw, vh 지정 가능</p>
+   <br>
+   <h4>margin 통합 속성</h4>
+   <p>margin:40px; - 상하좌우 바깥여백이 모두 40px </p>
+   <p>margin:20px 50px; - 상하 여백이 20px, 좌우 여백이 50px </p>
+   <p>margin:10px 20px 30px 40px; - 상10px/우20px/하30px/좌40px</p>
+   <h4>margin 세부 속성</h4>
+   <p>margin-left, margin-right, margin-top, margin-bottom</p>
+   <p>만약, 상/하/좌/우의 마진을 50px로 지정하되 위쪽 여백만 10px로 할 경우<br>
+    margin:50px; margin-top:10px; (O) <br>
+    margin-top:10px; margin:50px; (X) <br>
+    그러므로, 통합속성을 지정 후 세부속성을 지정해야 함</p>
+    <br>
+   <h4>padding 통합 속성</h4>
+   <p>padding:40px; - 상하좌우 바깥여백이 모두 40px </p>
+   <p>padding:20px 50px; - 상하 여백이 20px, 좌우 여백이 50px </p>
+   <p>padding:10px 20px 30px 40px; - 상10px/우20px/하30px/좌40px</p>
+   <h4>padding 세부 속성</h4>
+   <p>padding-left, padding-right, padding-top, padding-bottom</p>
+   <p>만약, 상/하/좌/우의 패딩을 50px로 지정하되 위쪽 여백만 10px로 할 경우<br>
+    padding:50px; padding-top:10px; (O) <br>
+    padding-top:10px; padding:50px; (X) <br>
+    그러므로, 통합속성을 지정 후 세부속성을 지정해야 함
+   </p>
+   <br>
+   <h3>border : 테두리</h3>
+   <h4>border 통합속성</h4>
+   <p>border:두께 선모양 선색깔;</p>
+   <h4>border 세부속성</h4>
+   <p>border-width : 선두께</p>
+   <p>border-style : 선모양</p>
+   <p>border-color : 선색</p>
+   <p>border-left, border-right, border-top, border-bottom</p>
+   <h4>border 세세속성</h4>
+   <p>border-left-color, border-left-style, border-left-width</p>
+   <p>.....</p>
+
+
+
+
+</body>
+</html>

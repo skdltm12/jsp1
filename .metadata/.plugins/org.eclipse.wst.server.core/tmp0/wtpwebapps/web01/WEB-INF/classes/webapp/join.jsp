@@ -32,10 +32,16 @@
 			</tr>
 			<tr>
 				<td>아이디 : </td>
+<<<<<<< HEAD
+				<td><input type="text" id="uid" name="uid" placeholder="아이디 입력" value="" required>
+					<input type="button" id="popopen" onclick="idCheck()" value="아이디 중복 확인">
+					<input type="hidden" id="idck" name="idck" value="">
+=======
 				<td>
 					<input type="text" id="uid" name="uid" placeholder="아이디 입력" value="" required>
 					<input type="hidden" id="idck" name="idck" value="">
 					<input type="button" onclick="idCheck()" value="아이디 중복 확인">
+>>>>>>> 3c83255d07ad55ecc155e21364ba1bab825f4b59
 				</td>
 			</tr>
 			<tr>
@@ -44,7 +50,11 @@
 			</tr>
 			<tr>
 				<td>비밀번호 확인 : </td>
+<<<<<<< HEAD
+				<td><input type="password" id="upw2" name="upw2" placeholder="비밀번호 확인" required></td>
+=======
 				<td><input type="password" id="upw2" name="upw2" placeholder="비밀번호 확인" value="" required></td>
+>>>>>>> 3c83255d07ad55ecc155e21364ba1bab825f4b59
 			</tr>
 			<tr>
 				<td>주소 : </td>

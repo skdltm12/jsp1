@@ -1,13 +1,5 @@
 INDEX VERSION 1.131
-<<<<<<< HEAD
-C:\sw\jps1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3949386174.index
-=======
-D:\yeo\jps1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3586485736.index
-\web01\src\main\java
-D:\yeo\jps1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1213168454.index
->>>>>>> 3c83255d07ad55ecc155e21364ba1bab825f4b59
-\web01\src\main\java
-C:\sw\jps1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2159936910.index
-\web01\src\main\java
-C:\sw\jps1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3557307777.index
+D:\yeo\jps1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1527700977.index
+\web01_comp\src\main\java
+D:\yeo\jps1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3557307777.index
 \web01\src\main\java

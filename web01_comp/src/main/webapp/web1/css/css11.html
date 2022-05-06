@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습11 - 색과 이미지에 관한 속성</title>
+    <style>
+        /* 
+        컬러시스템 : 잉크(cmyk-감법혼합), 빛(RGB-가산혼합)
+            #rrggbb -> rgb시스템(16진수 6자리) -> #rgb -> rgb시스템 축약식(16진수 3자리)
+            표준 색체계(standard color system) ->  hsl(hue, saturation, lightness) =>
+            색(순색), 채도(색의 양), 명도(밝고 어두움) -> 먼셀의 표색계
+         */
+        .color1 {color:blue;background-color: yellow;}
+        .color2 {color:#0000ff; background-color: #ffff00;}
+        .color3 {color:#00f; background-color: #ff0;}
+        .color4 {color:rgb(0,0,255); background-color: rgb(255,255,0);}
+        .color5 {color:rgba(0,0,255,0.8); background-color: rgb(255,255,0,0.8);}
+        .color6 {color:hsl(24,100,100)}
+        .color7 {color:hsla(24,100,100,0.7)}
+
+        /* .ibc { background-color:배경색; background-image: url(배경이미지);
+        background-size:이미지 크기; background-repeat: 배경이미지 반복;
+    background-position: 배경 이미지 시작 위치; background-attachment: 화면에 고정여부;
+            backg
+    } */
+
+            /*bgc*/
+        .pic1, .pic2, .pic3, .pic4 {width:100%; height: 600px;}
+        .pic1 { background-image: url("../html/pic/img1.jpg"); background-size:200px 300px;
+        background-repeat: no-repeat;background-position: 100px 200px; background-attachment:fixed;}
+        .pic2 { background-image: url("../html/pic/img2.jpg");
+        background-size:200px auto;background-repeat: repeat-x; background-position:right bottom;}
+        .pic3 {background-image: url("../html/pic/img3.jpg");
+        background-size: 200px auto; background-repeat: repeat-y;}
+        .pic4 {background-image: url("../html/pic/img4.jpg");
+        background-size: 200px auto; background-repeat: repeat;}
+    </style> 
+</head>
+<body>
+    <h2>색과 이미지에 관한 속성</h2>
+    <h2 class="color1 pic1">김준호</h2>
+    <h2 class="color2 pic2" >김태균</h2>
+    <h2 class="color3 pic3">김효민</h2>
+    <h2 class="color4 pic4">김예은</h2>
+    <h2 class="color5 ">김동협</h2>
+
+</body>
+</html>

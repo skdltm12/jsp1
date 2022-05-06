@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 9 -타겟 선택자</title>
+    <style>
+        .pic {opacity: 0; visibility: hidden; transition:2s; width:300px; height:auto;}
+        .pic:target { opacity:1; visibility:visible;}
+    </style>
+    
+</head>
+<body>
+    <nav class="tab">
+        <a href="#pic1">아이유1</a>
+        <a href="#pic2">아이유2</a>
+        <a href="#pic3">아이유3</a>
+        <a href="#pic4">아이유4</a>
+    </nav>
+    <img src="../html/pic/img1.jpg" alt="아이유1" id="pic1" class="pic">
+    <img src="../html/pic/img2.jpg" alt="아이유2" id="pic2" class="pic">
+    <img src="../html/pic/img3.jpg" alt="아이유3" id="pic3" class="pic">
+    <img src="../html/pic/img4.jpg" alt="아이유4" id="pic4" class="pic">
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습1 - 스타일과 기본 선택자</title>
+    <style>
+        .inner { color:red; }
+        .inner1 {color:chocolate}
+    </style>
+    <link rel="stylesheet" href="out.css">
+</head>
+<body>
+    <h2>스타일 문법과 기본 선택자</h2>
+    <p>CSS (Cascade Style Sheet) - 웹 문서에 종속된 스타일(서식)</p>
+    <p>문법 : 선택자 { 속성:값; 속성:값; }</p>
+    <p>예시) header nav a { color:red, font-weight:900; }</p>
+<hr>
+    <h3>선택자(selector)란?</h3>
+    <p>스타일(서식)이 부여될 대상</p>
+    
+<hr>
+    <h3>스타일을 정의하고, 지정하는 방법</h3>
+    <p class="inner">내부스타일 : 현재 문서에 스타일을 적용하는 경우이며,
+    style태그를 활용  </p>
+    <p class="outer">외부스타일 : 별도의 스타일(*.css)을 지정하여 link태그로 불러와 사용하는 경우</p>
+    <p style="color:skyblue; font: size 20px;">인라인스타일 : 해당 태그에 원하는 스타일을 style 속성으로 지정하는 경우</p>
+    <p class="inner1">내부스타일</p>
+    <p class="outer"> 외부스타일</p>
+
+</body>
+</html>

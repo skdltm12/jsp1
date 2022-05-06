@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 6 - 링크 선택자</title>
+    <style>
+        :link { color:red; } /*href속성이 있는 요소 */
+        :visited { color:deeppink; } /*href속성이 방문했던 주소면 선택 */
+        a:hover, nav:hover {background-color: yellow;} /*마우스 포인터를 올리면*/
+        a:active, nav:active {background-color: deepskyblue}
+        a:focus { border:3px solid rgb(2, 2, 2)}/* a요소 또는 input 요소 > 인터랙션 요소*/
+    </style>
+</head>
+<body>
+    <a href="http://www.navers.com">네이버</a><br><br>
+    <a>다음</a><br><br>
+    <nav>여승원</nav>
+</body>
+</html>

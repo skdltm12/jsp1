@@ -9,14 +9,6 @@
 	String address = request.getParameter("address");
 	String phone = request.getParameter("phone");
 %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
 <%
 	Connection conn = null;
 	PreparedStatement pstmt = null;
@@ -24,11 +16,11 @@
 	try{
 		Class.forName("org.mariadb.jdbc.Driver");
 		conn = DriverManager.getConnection("jdbc:mariadb://localhost:3308/company","root","1234!");
-		String sql = "insert into member (name,id,pw,phone,address) values(?,?,?,?,?)";
+		String sql = "insert into member (id,pw,name,phone,address) values(?,?,?,?,?)";
 		pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, name);
-		pstmt.setString(2, uid);
-		pstmt.setString(3, upw);
+		pstmt.setString(1, uid);
+		pstmt.setString(2, upw);
+		pstmt.setString(3, name);
 		pstmt.setString(4, phone);
 		pstmt.setString(5, address);
 		cnt = pstmt.executeUpdate();
@@ -48,13 +40,3 @@
 		}
 	}
 %>
-<table>
-	<tbody>
-		<tr>
-		</tr>
-	</tbody>
-</table>
-
-
-</body>
-</html>

@@ -33,6 +33,7 @@
 		opener.document.joinform.idck.value="yes";
 		window.close();
 	}
+
 </script>
 <%
 

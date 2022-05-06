@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습2 - 기본 선택자</title>
+    <style>
+        /* 스타일 내부의 각주 */         
+    * { line-height:2.4; } /* 전체 선택자 */
+    #kbs {font-size:24px; color:blue}
+    div { color:deeppink; } 
+    div#kbs { font-size: 46px;}
+    .mbc { text-decoration: line-through; color:blueviolet}
+    #kbs {font-size:32px; }
+    .data {color:aqua}
+    p.jtbc { font-weight: 900; }   /*복합 선택자 */
+    .jtbc { font-weight: 300; }
+    /*
+    #happy { } - 우선 순위가 높아서 먼저 적용됨
+    div p span a {} - 우선 순위가 낮음
+     */
+    /* 
+    <div>
+        <p>
+            <span><a href="" id="happy"></a></span>
+        </p>    
+    </div>
+    */
+
+    /* 선택자가 같고, 같은 속성이 지정이 되었지만,
+    값이 다를 경우 나중에 기입된 내용이 적용된다.*/
+    /* 선택자에는 우선 순위가 있다 : 아이디(금)>클래스(은)>태그(동)>*/
+    div, p { border:1px solid#333} /*복수 선택자*/
+    /* div, p {} : div와 p를 각 각 선택
+        <div></div>
+        <p></p>
+    div.jtbc {} : div태그중에 클래스가 jtbc인 요소 선택    
+        <div class="jtbc"></div>
+    div#kbs {} : div태그중에 아이디가 kbs인 요소 선택
+        <div id="kbs"></div>
+    div .jtbc {} : div태그 안에있는 요소중에 클래스가 jtbc인 요소 선택
+        <div>
+            <p class="jtbc"></p>
+        </div>
+    div #kbs {} : div태그 안에 있는 요소중에 아이디가 kbs인 요소 선택
+        <div>
+            <p>
+                <span id="kbs">
+            </p>
+        </div>
+    */
+        
+    
+    </style>
+</head>
+<body>
+    <div>div태그</div>
+    <div id="kbs" class="data">div#kbs 인 영역</div>
+    <div class="mbc jtbc">div.mbc 인 영역</div>
+    <div>div태그</div>
+    <p class="mbc">---------------------------------------</p>
+    <h3>기본 선택자</h3>
+    <p>전체 선택자 : *</p>
+    <p>태그 선택자 : tag이름</p>
+    <p class="mbc">클래스 선택자 : .클래스이름 -> 현재 문서에서 같은 서식을 적용하기 위해 사용</p>
+    <p class="jtbc">아이디 선택자 : #아이디이름 -> 현재 문서에서 중복된 아이디가 존재하면 안됨</p>
+
+
+
+
+</body>
+</html>
