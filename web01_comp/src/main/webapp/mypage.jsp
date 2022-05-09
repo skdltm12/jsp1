@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
+<% request.setCharacterEncoding("UTF-8");%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -35,6 +36,12 @@
        <link rel="stylesheet" href="./css/normalize.css">
        <link rel="stylesheet" href="common.css">
        <link rel="stylesheet" href="sub_common.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 자바스크립트 -->
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="datatables.min.js"></script>
 <meta charset="UTF-8">
 <title>회원정보 보기 및 수정</title>
 </head>
@@ -47,6 +54,14 @@
 </header>
 <div class="content" class="panel-body">
 	<h2>회원 정보 보기</h2>
+		                    <figure class="sub_ban">
+                        <img src="./web1/img/sub_top4.jpg" alt="서브탑">
+                    </figure>
+                     <div class="ptop1">                               
+                                            <img src="./web1/img/h3_bg.png" alt="표면처리1">
+                                                               <h2>마이 페이지</h2>                             
+                                <hr>                                
+                            </div>
 <%
 	Connection conn = null;
 	PreparedStatement pstmt = null;
@@ -61,8 +76,9 @@
 		rs = pstmt.executeQuery();
 		if(rs.next()){
 %>
+	<div class=tb12_div>
 			<form action="memEdit.jsp" method="post">
-				<table>
+				<table class="table">
 					<tbody>
 						<tr>
 							<td>아이디 : </td>
@@ -82,18 +98,18 @@
 						 </tr>
 						<tr>
 							<td>주소 : </td>
-							<td><input type="text" name="address" value='<%=rs.getString("address") %>'></td>
+							<td><input type="text" name="address" value='<%=rs.getString("address") %>' ></td>
 						 </tr>
 						 <tr>
 						 	<td colspan="2">
-						 		<input type="submit" value="정보변경"/> &nbsp; &nbsp; &nbsp;&nbsp;
-						 		<input type="reset" value="취소"/>						 		
+						 		<input type="submit" class="btn btn-primary" value="정보변경"/> &nbsp; &nbsp; &nbsp;&nbsp;
+						 		<input type="reset" class="btn btn-primary" value="취소"/>						 		
 						 	</td>
 						</tr>
 <%
 	if(!sid.equals("admin")){
 %>
-							<tr><td><a href="secession.jsp"><input type="button" value="회원탈퇴"></a><td><tr>
+							<tr><td><a href="secession.jsp"><input type="button" value="회원탈퇴" class="btn btn-primary"></a><td><tr>
 <%
 	}
 %> 
@@ -101,6 +117,7 @@
 					</tbody>
 				</table>
 			</form>
+			</div>
 <%			
 		}
 	} catch(Exception e){

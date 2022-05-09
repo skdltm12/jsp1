@@ -196,7 +196,33 @@ $(document).ready( function () {
                                 <h2>영업문의</h2>
                                 <p>HOME>고객지원>영업문의</p>
                                 <br><br>
-                                <hr>                                
+                                <hr>
+                                <p>현대기업 [개인정보처리자] 은(는) 온라인 상담 서비스 제공을 위한 개인정보 수집·이용을 위하여 개인정보 보호법 제15조 및 제22조에 따라 귀하의 동의를 받고자합니다.</p>
+                                <div class=tb12_div>
+                                <table class="table">
+                                	<tr>
+                                		<th>* 글쓴이</th>
+                                		<td><input type="text" required></td>
+                                	</tr>
+                                	<tr>
+                                	    <th>* 연락처</th>
+                                		<td><input type="text" required></td>
+                                	</tr>
+                                	<tr>
+                                	    <th>* E-mail</th>
+                                		<td><input type="text" required></td>
+                                	</tr>
+                                	<tr>
+										<th>제목</th>
+                                		<td><input type="text"></td>
+                                	</tr>
+                                	<tr>
+										<th>내용</th>
+                                		<td><textarea cols="50" rows="10"></textarea></td>
+                                	</tr>
+                                </table> 
+                                <button class="btn btn-primary">신청하기</button>
+                                </div>                              
                             </div>
                         </div>
                     </div>

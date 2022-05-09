@@ -51,7 +51,17 @@
 	</div>
 </header>
 <div class="content" class="panel-body">
-	<h2>회원목록</h2>
+	   <figure class="sub_ban">
+                        <img src="./web1/img/sub_top4.jpg" alt="서브탑">
+                    </figure>
+                                                                    <div class="ptop1">                               
+                            
+                                <img src="./web1/img/h3_bg.png" alt="표면처리1">
+                            
+                                <h2>회원목록</h2>                                
+                                <hr>                                
+                            </div>
+    <div class=tb12_div>
 	<table class="table">
 		<tr>
 			<th>아이디</th>
@@ -99,6 +109,7 @@
 	
 %>
 </table>
+	</div>
 </div>
 <footer id="ft" class="panel-footer">
 	<%@ include file="ft.jsp" %>
