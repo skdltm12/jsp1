@@ -202,11 +202,26 @@ iframe {padding-top: 30px;padding-bottom: 30px; }
 .tb7 tr:nth-child(6) td:nth-child(2) {border-right: 1px solid #ccc}
 .tb7 tr:nth-child(6) td:nth-child(3) {border-right: none;}
 
-.ppp123 {width: 100%; margin: 0 auto; list-style: none;}
-.process1 li {width: 400px; margin: 0 auto; text-align: center; float: left;}
-.process1 img {padding: 20px; float: left;}
-.process2 {width: 1200px; margin: 0 auto}
-.process2 img {padding: 20px;}
-.process3 {width: 1200px; margin: 0 auto}
-.process3 img {padding: 20px;}
+.p4bot1 {list-style: none; text-align: center;}
+.p4bot1 li{display: inline-block;width: 22%; text-align: center; padding: 0 1em 3em 0; background: url(./web1/img/arrow.png) no-repeat 100% 40%;}
+.p4bot1 li p{    font-weight: bold;color: #fff; background: #2c4589; border-radius: 100px;  display: inline-block; width: 30px; padding: 0 0.5em;}
+.p4bot1 li img {display: block; padding: 2em 0; margin: 0 auto;}
+.p4bot1 li span { display: block; font-weight: bold; padding: 1em 0; font-family: 'Roboto', sans-serif; color: #333;}
+.p4bot1 li:last-child {background: none;}
+
+.login1 {width:150px; height:300px; margin:0 auto;}
+.tb8_div {padding-bottom:60px}
+.tb8 {width:500px; margin:0 auto;}
+.tb8 th{font-size:20px; padding:10px; text-align:center;}
+.tb8 tr:last-child {text-align:center;}
+textarea {resize:none}
+
+.join1 {width:1000px; height:400px; margin:0 auto;}
+
+.tb10_div {width:1000px; margin:0 auto; padding-bottom:60px}
+
+.tb11_div {width:1000px; margin:0 auto; padding-bottom:60px}
+
+.tb12_div {width:1000px; margin:0 auto; padding-bottom:60px}
+
 

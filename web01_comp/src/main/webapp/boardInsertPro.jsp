@@ -21,7 +21,7 @@
 		pstmt.setString(2,bontent);
 		pstmt.setString(3,author);
 		cnt=pstmt.executeUpdate();
-		response.sendRedirect("board1.jsp");
+		response.sendRedirect("cosser.jsp#page1");
 	}catch(Exception e){
 		e.printStackTrace();
 	}finally{

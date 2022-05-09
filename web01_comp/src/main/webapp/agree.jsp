@@ -35,6 +35,10 @@
        <link rel="stylesheet" href="./css/normalize.css">
        <link rel="stylesheet" href="common.css">
        <link rel="stylesheet" href="sub_common.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 자바스크립트 -->
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script src="datatables.min.js"></script>
 <meta charset="UTF-8">
@@ -44,16 +48,32 @@
     <div class="wrap">
         <header id="hd">
             <div class = "hd_wrap">
-                <a href="index.jsp" class="logo"><img src="./web1/img/logo.jpg" alt="로고"></a>
 				<%@ include file="nav.jsp" %>
             </div>            
         </header>
-<h2>개인정보 처리방침 및 이용 약관</h2>
-	<div>
-	<table>
+    </div>
+<div>
+                    <figure class="sub_ban">
+                        <img src="./web1/img/sub_top4.jpg" alt="서브탑">
+                        <div class="tit_box">   
+                        	                         
+                            
+                        </div>
+                    </figure>
+                      <div class="ptop1">                               
+                                
+                                <img src="./web1/img/h3_bg.png" alt="표면처리1">
+                                <h2>개인정보 처리방침 및 이용 약관</h2>
+                                <hr>                                
+                            </div>
+    <div class="tb8_div">
+	<table class="tb8">
 		<tbody>
+		<tr>
+		<th>개인정보 처리방침</th>
+		</tr>
 			<tr>
-				<td>개인정보 처리방침<br>
+				<td>
 				<textarea name='agree1' id='agree1' cols="100" rows="20">
 				"1. 개인정보의 수집 및 이용 목적				
 기관은 수집한 개인정보를 다음의 목적을 위해 활용합니다.
@@ -125,7 +145,10 @@
 				<td style="float:right">동의<input type="checkbox" name="ck1" id="ck1"></td>
 			</tr>
 			<tr>
-			<td>개인정보 이용약관<br>
+				<th>개인정보 이용약관</th>
+			</tr>
+			<tr>
+			<td>
 			<textarea name='agree2' id='agree2' cols="100" rows="20">제 1장 총칙
 
 제 1 조(목적)
@@ -282,6 +305,7 @@
 		</tbody>
 	</table>
 </div>
+</div>
 	<script>
 		function fnc1(){
 			var ck1 = document.getElementById("ck1");
@@ -295,6 +319,8 @@
 			}
 		}
 	</script>
-</div>
+  <footer id="ft">
+ 		<%@ include file="ft.jsp" %>
+      </footer>
 </body>
 </html>

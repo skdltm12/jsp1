@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -31,6 +32,17 @@
        <link rel="stylesheet" href="./css/normalize.css">
        <link rel="stylesheet" href="common.css">
        <link rel="stylesheet" href="sub_common.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 자바스크립트 -->
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="datatables.min.js"></script>
+<script>
+$(document).ready( function () {
+    $('#myTable').DataTable();
+});
+</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,48 +53,7 @@
     <div class="wrap">
         <header id="hd">
             <div class = "hd_wrap">
-                <a href="index.jsp" class="logo"><img src="./web1/img/logo.jpg" alt="로고"></a>
-                <nav id="gnb">
-                    <ul>
-                        <li>
-                            <span>회사소개</span>
-                            <ul class="sub">
-                                <li><a href="company.jsp#page1">인사말</a></li>
-                                <li><a href="company.jsp#page2">연혁</a></li>
-                                <li><a href="company.jsp#page3">보유인증</a></li>
-                                <li><a href="company.jsp#page4">오시는길</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>제품소개</span>
-                            <ul class="sub">
-                                <li><a href="product.jsp#page1">표면처리</a></li>
-                                <li><a href="product.jsp#page2">Door</a></li>
-                                <li><a href="product.jsp#page3">Wall</a></li>
-                                <li><a href="product.jsp#page4">천정판</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>보유설비</span>
-                            <ul class="sub">                                
-                                <li><a href="equipment.jsp#page1">판금설비</a></li>
-                                <li><a href="equipment.jsp#page2">표면처리설비</a></li>
-                                <li><a href="equipment.jsp#page3">공정도</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>고객지원</span>
-                            <ul class="sub">
-                                <li><a href="cosser.jsp#page1">공지사항</a></li>
-                                <li><a href="cosser.jsp#page2">영업문의</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <p id="tnb">
-                    <a href="">로그인</a>
-                    <a href="">사이트맵</a>
-                    <a href="company.jsp#page4">오시는 길</a></p>
+                <%@ include file="nav.jsp" %>
             </div>            
         </header>
         <div id="content">
@@ -122,7 +93,73 @@
                                 <br><br>
                                 <hr>                                
                             </div>
+							<div class="panel-body">
+<div class="container-fluid">
+	<table class="table" id="myTable">
+		<thead>
+		<tr>
+			<td>번호&nbsp;&nbsp;</td>
+			<td>제목&nbsp;&nbsp;</td>
+			<td>작성일&nbsp;&nbsp;</td>
+			<td>작성자&nbsp;&nbsp;</td>
+		</tr>
+		<thead>
+		<tbody>
+	<%
+	request.setCharacterEncoding("UTF-8");
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+	
+	try{
+		Class.forName("org.mariadb.jdbc.Driver");
+		conn = DriverManager.getConnection("jdbc:mariadb://localhost:3308/company","root","1234!");
+		String sql = "select * from board";
+		pstmt = conn.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		while(rs.next()){
+%>
+		<tr>
+			<td><%=rs.getInt("bno") %>&nbsp;&nbsp; </td>
+			<td><a href='boardDetail.jsp?bno=<%=rs.getInt("bno") %>'><%=rs.getString("btitle")%>&nbsp;&nbsp; </a></td>				 
+			<td><%=rs.getString("regdate") %>&nbsp;&nbsp; </td>
+			<td><%=rs.getString("author") %>&nbsp;&nbsp; </td>
+		</tr>	
+		<tr>
+		
+<%
+		}
+%>		
+<%	
 
+	}catch(Exception e){
+		e.printStackTrace();
+	}finally{
+		
+	}try{
+		rs.close();
+		pstmt.close();
+		conn.close();
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+	%>
+	
+	</tbody>
+	</table>
+	<% if(sid==null){%>
+				<p></p>
+<% }else if(sid.equals("admin")){ %>
+<button class="btn btn-primary" onclick="location.href='boardinsert.jsp'" >글쓰기</button>
+<%
+} else{
+%>
+<p></p>
+<%
+}
+%>
+	</div>
+	</div>
                         </div>
                     </div>
                 </section>
@@ -176,31 +213,8 @@
            
         </div>
     <footer id="ft">
-     <div class="ft_wrap">
-         <nav class="snb">
-             <li class="sns1">
-                 <a href="" title="youtube"><i class="xi-youtube-play"></i></a>
-             </li>
-             <li class="sns2">
-                 <a href="" title="facebook"><i class="xi-facebook-official"></i></a>
-             </li>
-             <li class="sns3">
-                 <a href="" title="instagram"><i class="xi-instagram"></i></a>
-             </li>
-        </nav>
-        <nav class="fnb">
-             <a href="">개인정보 취급 방침</a>
-             <a href="">이용 약관</a>
-             <a href="">이메일 무단수집 거부</a>  
-        </nav>            
-        <nav class="copyright">
-            <p>주식회사 현대기업 대표자 : 이호철<br>
-                경남 함안군 칠서면 공단동4길 94 Tel: 055-297-5701 Fax : 055-293-5936 E-mail : hdke@hdke.co.kr</p>
-            <p>Copyright(c) 2021 Hyundae Co.,Ltd. Al rights reserved. Disigned by</p>
-            </nav>
-       </div>     
+		<%@ include file="ft.jsp" %> 
       </footer>
-    </div>    
     
 </body>
 </html>

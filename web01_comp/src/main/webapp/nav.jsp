@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<a href="index.jsp" class="logo"><img src="./web1/img/logo.jpg" alt="로고"></a>
 <nav id="gnb">
                     <ul>
                         <li>
@@ -25,14 +26,14 @@
                             <ul class="sub">                                
                                 <li><a href="equipment.jsp#page1">판금설비</a></li>
                                 <li><a href="equipment.jsp#page2">표면처리설비</a></li>
-                                <li><a href="equipment#page3">공정도</a></li>
+                                <li><a href="equipment.jsp#page3">공정도</a></li>
                             </ul>
                         </li>
                         <li>
                             <span>고객지원</span>
                             <ul class="sub">
-                                <li><a href="cosser#page1">공지사항</a></li>
-                                <li><a href="cosser#page2">영업문의</a></li>
+                                <li><a href="cosser.jsp#page1">공지사항</a></li>
+                                <li><a href="cosser.jsp#page2">영업문의</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -44,24 +45,24 @@
                 if(sid==null){
                 %>
                <a href="login.jsp">로그인</a>
-               <a href="">사이트맵</a>
+               <a href="cosser.jsp#page1">공지사항</a>
                <a href="agree.jsp">회원가입</a>
                 <%
                 }else if (!sid.equals("admin")){
                 %>
+				<a href="mypage.jsp"><%=sname %></a> 
                 <a href="logout.jsp">로그아웃</a>
-                <a href="mypage.jsp"><%=sname %></a> 
                 <a href="company.jsp#page4">오시는 길</a>
-                <a href="board1.jsp">게시판</a>
+                <a href="cosser.jsp#page1">공지사항</a>
               
                 <%
                 }else{
                 %>                        
-                    <a href="board1.jsp">게시판관리</a>
+                    <a href="cosser.jsp#page1">공지사항</a>
                     <a href="memberList.jsp">회원목록</a>
-                    <a href="company.jsp#page4">오시는 길</a>
-                    <a href="logout.jsp">로그아웃</a>
+                    <a href="company.jsp#page4">오시는 길</a><br>
                     <a href="mypage.jsp"><%=sname %></a>
+					<a href="logout.jsp">로그아웃</a>
 					<span id="msg_a"></span>
 					<%
                 }

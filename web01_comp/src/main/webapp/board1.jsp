@@ -35,6 +35,10 @@
        <link rel="stylesheet" href="./css/normalize.css">
        <link rel="stylesheet" href="common.css">
        <link rel="stylesheet" href="sub_common.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 자바스크립트 -->
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script src="datatables.min.js"></script>
 <script>
@@ -47,7 +51,7 @@ $(document).ready( function () {
 </head>
 <body>
 <div class="container-full">
-<header id="hd" class="panel-heading navbar navbar-default">
+<header id="hd">
 	<div class="hd_wrap container">
 		<%@ include file="nav.jsp" %>
 	</div>

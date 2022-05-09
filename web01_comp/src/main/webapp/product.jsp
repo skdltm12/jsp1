@@ -44,48 +44,7 @@
     <div class="wrap">
         <header id="hd">
             <div class = "hd_wrap">
-                <a href="index.jsp" class="logo"><img src="./web1/img/logo.jpg" alt="로고"></a>
-                <nav id="gnb">
-                    <ul>
-                        <li>
-                            <span>회사소개</span>
-                            <ul class="sub">
-                                <li><a href="company.jsp#page1">인사말</a></li>
-                                <li><a href="company.jsp#page2">연혁</a></li>
-                                <li><a href="company.jsp#page3">보유인증</a></li>
-                                <li><a href="company.jsp#page4">오시는길</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>제품소개</span>
-                            <ul class="sub">
-                                <li><a href="product.jsp#page1">표면처리</a></li>
-                                <li><a href="product.jsp#page2">Door</a></li>
-                                <li><a href="product.jsp#page3">Wall</a></li>
-                                <li><a href="product.jsp#page4">천정판</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>보유설비</span>
-                            <ul class="sub">                                
-                                <li><a href="equipment.jsp#page1">판금설비</a></li>
-                                <li><a href="equipment.jsp#page2">표면처리설비</a></li>
-                                <li><a href="equipment.jsp#page3">공정도</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>고객지원</span>
-                            <ul class="sub">
-                                <li><a href="cosser.jsp#page1">공지사항</a></li>
-                                <li><a href="cosser.jsp#page2">영업문의</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <p id="tnb">
-                    <a href="">로그인</a>
-                    <a href="">사이트맵</a>
-                    <a href="company.jsp#page4">오시는 길</a></p>
+                <%@ include file="nav.jsp" %>
             </div>            
         </header>
         <div id="content">

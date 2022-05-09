@@ -45,48 +45,7 @@
     <div class="wrap">
         <header id="hd">
             <div class = "hd_wrap">
-                <a href="index.jsp" class="logo"><img src="./web1/img/logo.jpg" alt="로고"></a>
-                <nav id="gnb">
-                    <ul>
-                        <li>
-                            <span>회사소개</span>
-                            <ul class="sub">
-                                <li><a href="company.jsp#page1">인사말</a></li>
-                                <li><a href="company.jsp#page2">연혁</a></li>
-                                <li><a href="company.jsp#page3">보유인증</a></li>
-                                <li><a href="company.jsp#page4">오시는길</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>제품소개</span>
-                            <ul class="sub">
-                                <li><a href="product.jsp#page1">표면처리</a></li>
-                                <li><a href="product.jsp#page2">Door</a></li>
-                                <li><a href="product.jsp#page3">Wall</a></li>
-                                <li><a href="product.jsp#page4">천정판</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>보유설비</span>
-                            <ul class="sub">                                
-                                <li><a href="equipment.jsp#page1">판금설비</a></li>
-                                <li><a href="equipment.jsp#page2">표면처리설비</a></li>
-                                <li><a href="equipment.jsp#page3">공정도</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span>고객지원</span>
-                            <ul class="sub">
-                                <li><a href="cosser.jsp#page1">공지사항</a></li>
-                                <li><a href="cosser.jsp#page2">영업문의</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <p id="tnb">
-                    <a href="">로그인</a>
-                    <a href="">사이트맵</a>
-                    <a href="company.jsp#page4">오시는 길</a></p>
+         	 <%@ include file="nav.jsp" %>
             </div>            
         </header>
         <div id="content">
@@ -456,52 +415,69 @@
                                 <hr>
                                 <br><br>
                             </div>
-                            <div class="ppp123">
-                                <div class="process1">
-                                    <li>
-                                        <img src="./web1/img/process01.png" alt="">
-                                    </li>                                  
-                                    <li>
-                                    <img src="./web1/img/arrow.png" alt="">
-                                    </li>
-                                    <li>
+                            <div class="p4bot1">
+                            	<ul>
+                                <li>
+                                    <img src="./web1/img/process01.png" alt="">
+                                    <p>01</p>
+                                    <span>Warehousing</span>
+                                </li>
+                                <li>
                                     <img src="./web1/img/process02.png" alt="">
-                                    </li>
-                                    <li>
-                                    <img src="./web1/img/arrow.png" alt="">
-                                    </li>
-                                    <li>
+                                    <p>02</p>
+                                    <span>Shearing</span>
+                                </li>
+                                <li>
                                     <img src="./web1/img/process03.png" alt="">
-                                    </li>
-                                        <li>
-                                    <img src="./web1/img/arrow.png" alt="">
-                                    </li>
-                                        <li>
+                                    <p>03</p>
+                                    <span>Etching</span>
+                                </li>
+                                <li>
                                     <img src="./web1/img/process04.png" alt="">
-                                    </li>
-                                    <li>
-                                    <img src="./web1/img/arrow.png" alt="">
-                                 </li>
-                                </div>
-                                <div class="process2">
-                                <img src="./web1/img/process05.png" alt="">                            
-                                <img src="./web1/img/arrow.png" alt="">
-                                <img src="./web1/img/process06.png" alt="">
-                                <img src="./web1/img/arrow.png" alt="">
-                                <img src="./web1/img/process07.png" alt="">
-                                <img src="./web1/img/arrow.png" alt="">
-                                <img src="./web1/img/process08.png" alt="">
-                                <img src="./web1/img/arrow.png" alt="">
-                                </div>
-                                <div class="process3">
-                                <img src="./web1/img/process09.png" alt="">
-                                <img src="./web1/img/arrow.png" alt="">
-                                <img src="./web1/img/process10.png" alt="">
-                                <img src="./web1/img/arrow.png" alt="">
-                                <img src="./web1/img/process11.png" alt="">
-                                <img src="./web1/img/arrow.png" alt="">
-                                <img src="./web1/img/process12.png" alt="">                                
-                                </div>
+                                    <p>04</p>
+                                    <span>Precsion Shearing</span>
+                                </li>
+                                <li>
+                                    <img src="./web1/img/process05.png" alt="">
+                                    <p>05</p>
+                                    <span>Punching</span>
+                                </li>
+                                <li>
+                                    <img src="./web1/img/process06.png" alt="">
+                                    <p>06</p>
+                                    <span>Bending</span>
+                                </li>
+                                <li>
+                                    <img src="./web1/img/process07.png" alt="">
+                                    <p>07</p>
+                                    <span>Welding</span>
+                                </li>
+                                <li>
+                                    <img src="./web1/img/process08.png" alt="">
+                                    <p>08</p>
+                                    <span>Assembly</span>
+                                </li>
+                                <li>
+                                    <img src="./web1/img/process09.png" alt="">
+                                    <p>09</p>
+                                    <span>Inspection</span>
+                                </li>
+                                <li>
+                                    <img src="./web1/img/process10.png" alt="">
+                                    <p>10</p>
+                                    <span>Packing</span>
+                                </li>
+                                <li>
+                                    <img src="./web1/img/process11.png" alt="">
+                                    <p>11</p>
+                                    <span>Shipment</span>
+                                </li>
+                                <li>
+                                    <img src="./web1/img/process12.png" alt="">
+                                    <p>12</p>
+                                    <span>출고</span>
+                                </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

@@ -30,20 +30,19 @@
     .wrap {clear:both; width: 100%;}
     #hd {clear:both; width: 100%; background-color:#fff; height: 80px;}
     .hd_wrap {clear:both; width: 1280px; margin:0 auto}
-    .logo {display:block; width:280px; float:left; margin: 13px; padding-right: 35px;}
+    .logo {display:block; width:280px; float:left; margin: 13px; padding-right: 15px;}
     .logo img{display:block; width: 100%; margin-top: 10px;}
-    #gnb{float:left; margin-top: 18px;}
+    #gnb{float:left; margin-top: 18px;  text-decoration: none;}
     #gnb>ul>li {float:left;padding-left: 50px; padding-right: 80px; position: relative;}
     #gnb>ul>li>span {display:block;line-height:36px; cursor:pointer;
         font-family: 'Noto Sans KR'; font-size: 16px; font-weight: 600;
         }
     #gnb ul li .sub {display: none; position: absolute; left:10px;  top: 35px;
-    padding-left: 40px; width: 160px; height: 200px; background-color: #eee; z-index: 999;}
+    padding-left: 40px; width: 160px; height: 200px; background-color: rgb(238, 238, 238); z-index: 999; border: 1px solid rgb(73,73,229)}
     
     #gnb ul li .sub a:hover {color:blueviolet;}
     #gnb ul li .sub li { line-height: 36px;} 
     #gnb ul li:hover .sub {display: block;} 
-
     #content { clear:both; width: 100%; }
     #vs {width: 100%;overflow: hidden;}
     .img_box {width: 400%;} 
@@ -64,7 +63,7 @@
   
     
     #tnb{float: right; padding-top: 14px; padding-bottom: 14px; margin-top: 14px;}
-    #tnb a {font-size: 0.85em; padding-left: 5px;}
+    #tnb a {font-size: 0.75em}
     #tnb a:hover {color: rgb(165, 209, 209);}
 
     #content{clear:both;width: 100%;}

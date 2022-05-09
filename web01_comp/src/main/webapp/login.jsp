@@ -37,9 +37,12 @@
        <link rel="stylesheet" href="./css/normalize.css">
        <link rel="stylesheet" href="common.css">
        <link rel="stylesheet" href="sub_common.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 테마 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <!-- 자바스크립트 -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="datatables.min.js"></script>
 <link rel="stylesheet" href="">
 </head>
 <body>
@@ -50,11 +53,22 @@
 	<%@ include file="nav.jsp" %>
 	</div>
 </header>
-<div class="content" class="panel-body">
-	<h2>로그인</h2>
+<div class="content1">
+ <figure class="sub_ban">
+                        <img src="./web1/img/sub_top4.jpg" alt="서브탑">
+                        <div class="tit_box">
+                        </div>
+                    </figure>
+               <div class="ptop1">                               
+<img src="./web1/img/h3_bg.png" alt="표면처리1">
+         <h2>로그인</h2>
+
+                   <hr>                                
+               </div>
+               <div class="login1">                    
 	<form id="frm1" name="login" action="loginpro.jsp" method="post">
 		<ul>
-			<br><br><br><br><br><br><br><br><br><br><br><br><br>
+			
 			<li><input type="text" class="indata" id="uid" name="uid" placeholder="아이디 입력"
 			required autofocus></li>
 			<li><input type="password" class="indata" id="upw" name="upw" placeholder="비밀번호 입력"
@@ -65,6 +79,7 @@
 			</li>
 		</ul>
 	</form>
+		</div>
 </div>
 <footer id="ft" class="panel-footer">
 	<%@ include file="ft.jsp" %>

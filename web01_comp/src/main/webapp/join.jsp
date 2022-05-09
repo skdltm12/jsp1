@@ -35,6 +35,10 @@
        <link rel="stylesheet" href="./css/normalize.css">
        <link rel="stylesheet" href="common.css">
        <link rel="stylesheet" href="sub_common.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 자바스크립트 -->
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script src="datatables.min.js"></script>
 <meta charset="UTF-8">
@@ -47,10 +51,21 @@
 	<%@ include file="nav.jsp" %>
 	</div>
 </header>
-<div>
-	<h2>회원가입</h2>
-	<form action="joinPro.jsp" method="post" name="joinform" onsubmit="return joincheck(this)">
-		<table>
+<div class="join">
+                   <figure class="sub_ban">
+                        <img src="./web1/img/sub_top4.jpg" alt="서브탑">
+                        <div class="tit_box">
+                        </div>
+                    </figure>
+                     <div class="ptop1">                               
+                                
+                                <img src="./web1/img/h3_bg.png" alt="표면처리1">
+                                <h2>회원가입</h2>
+                                <hr>                                
+                            </div>
+     	<div class="join1">
+	<form action="joinPro.jsp" method="post" name="joinform" onsubmit="return joincheck(this)">	
+		<table class="table tb9" id="myTable">
 			<tbody>
 			<tr>
 				<td>이름 : </td>
@@ -58,17 +73,9 @@
 			</tr>
 			<tr>
 				<td>아이디 : </td>
-<<<<<<< HEAD
 				<td><input type="text" id="uid" name="uid" placeholder="아이디 입력" value="" required>
 					<input type="button" id="popopen" onclick="idCheck()" value="아이디 중복 확인">
 					<input type="hidden" id="idck" name="idck" value="">
-=======
-				<td>
-					<input type="text" id="uid" name="uid" placeholder="아이디 입력" value="" required>
-					<input type="hidden" id="idck" name="idck" value="">
-					<input type="button" onclick="idCheck()" value="아이디 중복 확인">
->>>>>>> 3c83255d07ad55ecc155e21364ba1bab825f4b59
-				</td>
 			</tr>
 			<tr>
 				<td>비밀번호 : </td>
@@ -76,11 +83,7 @@
 			</tr>
 			<tr>
 				<td>비밀번호 확인 : </td>
-<<<<<<< HEAD
 				<td><input type="password" id="upw2" name="upw2" placeholder="비밀번호 확인" required></td>
-=======
-				<td><input type="password" id="upw2" name="upw2" placeholder="비밀번호 확인" value="" required></td>
->>>>>>> 3c83255d07ad55ecc155e21364ba1bab825f4b59
 			</tr>
 			<tr>
 				<td>주소 : </td>
@@ -92,13 +95,14 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<input type="submit" value="가입" class="btn btn-primary">&nbsp; &nbsp; &nbsp;
-					<input type="reset" value="취소" class="btn btn-primary">&nbsp; &nbsp; &nbsp;
+					<input type="submit" value="가입" class="btn btn-primary">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+					<input type="reset" value="취소" class="btn btn-primary">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
 					<input value="메인으로" onclick="location='index.jsp'" class="btn btn-primary" >
 				</td>
 			</tr>
 		</tbody>
 		</table>
+
 					
 		<script>
 		function idCheck(){
@@ -116,6 +120,7 @@
 		}
 		</script>
 	</form>
+	</div>
 </div>
 <footer id="ft">
 	<%@ include file="ft.jsp" %>

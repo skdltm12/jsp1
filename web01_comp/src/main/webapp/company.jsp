@@ -47,7 +47,6 @@
     <div class="wrap">
         <header id="hd">
             <div class = "hd_wrap">
-                <a href="index.jsp" class="logo"><img src="./web1/img/logo.jpg" alt="로고"></a>
 				<%@ include file="nav.jsp" %>
             </div>            
         </header>
