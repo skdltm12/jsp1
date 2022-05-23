@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>web02_2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+  	<filter-name>FilterTest1</filter-name>
+  	<filter-class>com.company.common.FilterTest1</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>FilterTest1</filter-name>
+  	<url-pattern>*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>CharacterEncoding</filter-name>
+  	<filter-class>com.company.common.CharacterEncoding</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>CharacterEncoding</filter-name>
+  	<url-pattern>*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>LogFilter1</filter-name>
+  	<filter-class>com.company.common.LogFilter1</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>LogFilter1</filter-name>
+  	<url-pattern>*</url-pattern>
+  </filter-mapping>
+  
+<!-- <filter>
+  	<filter-name>EncryptFilter1</filter-name>
+  	<filter-class>com.company.common.EncryptFilter1</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>EncryptFilter1</filter-name>
+  	<url-pattern>*</url-pattern>
+  </filter-mapping>
+-->
+
+	<context-param>
+		<param-name>biz</param-name>
+		<param-value>yeoseungwon</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>A01FilterOne</servlet-name>
+		<servlet-class>com.company.view.A01FilterOne</servlet-class>
+	</servlet> 
+	<servlet-mapping>
+		<servlet-name>A01FilterOne</servlet-name>
+		<url-pattern>/A01FilterOne</url-pattern>
+	</servlet-mapping> 
+	
+	<error-page>
+		<exception-type>java.lang.NumberFormatException</exception-type>
+		<location>/err/ErrorPage.jsp</location>
+	</error-page>
+	
+	<error-page>
+		<exception-type>java.lang.NullPointerException</exception-type>
+		<location>/err/ErrorPage.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/err/ErrorPage.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/err/ServerErrorPage.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/err/NotFoundErrorPage.jsp</location>
+	</error-page>
+		
+</web-app>

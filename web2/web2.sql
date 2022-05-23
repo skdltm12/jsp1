@@ -96,7 +96,7 @@ create table notice (nno number(10) primary key,
     viewcnt number(11)
 ); 
 create sequence scott.noti_seq increment by 1 start with 1 minvalue 1 maxvalue 100000 nocycle nocache;
-insert into notice values(noti_seq.nextval,'여주 마라톤대회 일정 공지','우천으로 취소됨을 알립니다','',sysdate,'admin','');
+insert into notice values(1,'여주 마라톤대회 일정 공지','우천으로 취소됨을 알립니다','',sysdate,'admin','');
 
 select * from tourlist;
 select * from review;
