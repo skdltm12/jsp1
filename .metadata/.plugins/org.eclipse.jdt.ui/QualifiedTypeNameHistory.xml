@@ -15,4 +15,7 @@
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="javax.security.auth.message.callback.PrivateKeyCallback.Request"/>
     <fullyQualifiedTypeName name="javax.security.auth.message.callback.SecretKeyCallback.Request"/>
+    <fullyQualifiedTypeName name="com.shop.common.BoardVO"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.x.protobuf.MysqlxExpect.Open.Condition"/>
+    <fullyQualifiedTypeName name="java.util.Base64"/>
 </qualifiedTypeNameHistroy>

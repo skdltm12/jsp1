@@ -90,7 +90,7 @@
 		    <div class="navbar-end">
 		      <div class="navbar-item">
 		        <div class="buttons">
-		          <a class="button is-primary">
+		          <a href="agree.jsp" class="button is-primary">
 		            <strong>회원가입</strong>
 		          </a>
 		          <a class="button is-light">

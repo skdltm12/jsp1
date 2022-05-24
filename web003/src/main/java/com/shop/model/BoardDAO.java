@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.mysql.cj.x.protobuf.MysqlxExpect.Open.Condition;
 import com.shop.common.BoardVO;
 import com.shop.common.JDBCConnection;
 
@@ -47,7 +48,6 @@ public class BoardDAO {
 		}
 		return list;
 	}
-	
 	public BoardVO getBoard(int seq) {
 		BoardVO vo = new BoardVO();
 		try {
@@ -148,4 +148,43 @@ public class BoardDAO {
 		}
 		return cnt;
 	}
-}
+	public ArrayList<BoardVO> getConditionSearch(String condition, String keyword) {;
+		ArrayList<BoardVO> list = null;
+		list = new ArrayList<BoardVO>();
+		try {
+			conn = JDBCConnection.getConnection();
+			if(condition.equals("title")) {
+			sql = "select * from board where title like ?";
+			} else {
+			sql = "select * from board where content like ?";				
+			}
+			
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, "%"+keyword+"%");
+			rs = pstmt.executeQuery();
+
+			while(rs.next()) {
+				BoardVO vo = new BoardVO();
+				vo.setSeq(rs.getInt("seq"));
+				vo.setTitle(rs.getString("title"));
+				vo.setContent(rs.getString("content"));
+				vo.setNickname(rs.getString("nickname"));
+				vo.setRegdate(rs.getDate("regdate"));
+				vo.setViewcnt(rs.getInt("viewcnt"));
+				list.add(vo);
+			}
+		} catch(ClassNotFoundException e) {
+			System.out.println("드라이버 로딩이 실패되었습니다.");
+			e.printStackTrace();
+		} catch(SQLException e) {
+			System.out.println("SQL구문이 처리되지 못했습니다.");
+			e.printStackTrace();
+		} catch(Exception e) {
+			System.out.println("잘못된 요청으로 업무를 처리하지 못했습니다.");
+			e.printStackTrace();
+		} finally {
+			JDBCConnection.close(rs, pstmt, conn);
+		}
+		return list;
+	}
+	}	
