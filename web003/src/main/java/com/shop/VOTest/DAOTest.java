@@ -34,8 +34,8 @@ class DAOTest {
 	void setUp() throws Exception {
 		vo1 = new BoardVO();
 		dao1 = new BoardDAO();
-		vo1.setTitle("유닛테스트 제목1");
-		vo1.setContent("JUnit Test입니다.");
+		vo1.setTitle("유닛테스트 제목220");
+		vo1.setContent("JUnit Test220입니다.");
 		vo1.setNickname("admin");
 		System.out.println("DAO테스트 시작");
 	}

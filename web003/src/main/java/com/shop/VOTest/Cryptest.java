@@ -14,7 +14,7 @@ class Cryptest {
 
 	private String data = "1234";
 	private String encoding;
-	private String indata = "MTIzNA==";
+	private String indata = "VmtaYVUxTnRWbkpPVlZaWFZrVnJPUT09";							 
 	private byte[] decoding;
 	
 	

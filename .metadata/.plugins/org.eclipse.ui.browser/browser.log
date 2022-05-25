@@ -346,3 +346,16 @@
 5월 24, 2022 14:46:47.928 [6188:14180:0524/144647.928:ERROR:interface_endpoint_client.cc(665)] Message 5 rejected by interface blink.mojom.WidgetHost
 5월 24, 2022 16:31:02.194 [12292:164:0524/163102.194:ERROR:device_event_log_impl.cc(214)] [16:31:02.194] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
 5월 24, 2022 16:32:00.75 [12292:14104:0524/163200.075:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+5월 25, 2022 09:58:28.879 NEW SESSION
+5월 25, 2022 09:58:28.879 [1936:556:0525/095828.878:ERROR:device_event_log_impl.cc(214)] [09:58:28.879] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 25, 2022 10:00:10.362 [12456:4696:0525/100010.362:ERROR:device_event_log_impl.cc(214)] [10:00:10.362] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 25, 2022 10:01:07.518 [12456:13756:0525/100107.517:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 25, 2022 10:02:34.735 [8872:1380:0525/100234.735:ERROR:device_event_log_impl.cc(214)] [10:02:34.735] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 25, 2022 10:03:32.722 [8872:7352:0525/100332.721:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+5월 25, 2022 12:22:40.161 [5672:9080:0525/122240.161:ERROR:device_event_log_impl.cc(214)] [12:22:40.161] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 25, 2022 12:23:26.502 [10100:12212:0525/122326.501:ERROR:device_event_log_impl.cc(214)] [12:23:26.501] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+5월 25, 2022 12:24:24.450 [10100:7000:0525/122424.450:ERROR:util.cc(126)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+5월 25, 2022 18:14:59.554 NEW SESSION
+5월 25, 2022 18:14:59.554 [552:12640:0525/181459.554:ERROR:device_event_log_impl.cc(214)] [18:14:59.554] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.

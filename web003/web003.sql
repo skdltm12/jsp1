@@ -1,1 +1,1 @@
-use company
+select * from board;

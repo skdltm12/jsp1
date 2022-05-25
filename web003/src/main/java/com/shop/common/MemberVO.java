@@ -8,7 +8,9 @@ public class MemberVO {
 	private String mname;
 	private String memail;
 	private String mtel;
-	private String maddress;
+	private String addr1;
+	private String addr2;
+	private String postcode;
 	private Date mjoindate;
 	private int mrank;
 	public String getMid() {
@@ -41,11 +43,23 @@ public class MemberVO {
 	public void setMtel(String mtel) {
 		this.mtel = mtel;
 	}
-	public String getMaddress() {
-		return maddress;
+	public String getAddr1() {
+		return addr1;
 	}
-	public void setMaddress(String maddress) {
-		this.maddress = maddress;
+	public void setAddr1(String addr1) {
+		this.addr1 = addr1;
+	}
+	public String getAddr2() {
+		return addr2;
+	}
+	public void setAddr2(String addr2) {
+		this.addr2 = addr2;
+	}
+	public String getPostcode() {
+		return postcode;
+	}
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
 	}
 	public Date getMjoindate() {
 		return mjoindate;
@@ -59,6 +73,6 @@ public class MemberVO {
 	public void setMrank(int mrank) {
 		this.mrank = mrank;
 	}
-	
+
 	
 }
