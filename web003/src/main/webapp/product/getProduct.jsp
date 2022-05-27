@@ -16,62 +16,53 @@
 <div id="content">
 	<section class="con_wrap">
 		<h2>상품 상세보기</h2>
-		<form action="${path1 }/editBoardCtrl" method="post">
+		<form action="${path1 }/editProductCtrl" method="post">
 			<table class="table" id="lst_tb">
 				<tbody>
 					<tr>
-						<th>제목</th>
-						<td>
-						<c:if test="${sid=='admin' }">
-							<input type="text" name="title" value="${board.title }">
-				
-						</c:if>
-						<c:if test="${sid=='admin' }">
-							<p>${board.title }</p>
-						</c:if>
-							<input type="hidden" name="seq" value="${board.seq }">
+						<th>상품코드</th>
+						<td>	
+							<p>${product.cate_id }${product.pid }</p>			
 						</td>
 					</tr>
 					<tr>
-						<th>작성자</th>
-						<td>
-						<c:if test="${sid=='admin' }">
-							<input type="text" name="nickname" value="${board.nickname }">
-						</c:if>
-											<c:if test="${sid=='admin' }">
-							<p>${board.nickname }</p>
-		</c:if>
+						<th>상품명</th>
+						<td>			
+							<p>${product.pname }</p>
 						</td>
 						
 					</tr>
 					<tr>
-						<th>내용</th>
+						<th>가격</th>
 						<td>
-								<c:if test="${sid=='admin' }">
-							<textarea cols="100" rows ="7" name="content">${board.content }</textarea>
-				
-			</c:if>
-								<c:if test="${sid=='admin' }">
-							<p>${board.content }</p>
-		</c:if>
+							<p>${product.pprice }</p>	
 						</td>
 					</tr>
 					<tr>
 						<th>등록일</th>
-						<td>${board.regdate }</td>
+						<td>${product.regdate }</td>
 					</tr>
 					<tr>
-						<th>조회수</th>
-						<td>${board.viewcnt }</td>
+						<th>상세내용</th>
+						<td>${product.pcontent }</td>
 					</tr>
+					<tr>
+						<th>남은 수량</th>
+						<td>${product.pamount }</td>
+					</tr>
+					<tr>
+						<th>상품 이미지</th>
+						<td>${product.pimg }</td>
+					</tr>
+					
 					<tr>
 						<td colspan="2">
-						<c:if test="${sid=='admin' }">
+			
 							<input type="submit" value="수정" class="button is-info"/>
 							<input type="reset" value="취소" class="button is-info"/>
-							<a href="${path1 }/DelBoardCtrl?num=${board.seq }" class="button is-info">삭제</a>
-						</c:if>
-							<a href="${path1 }/GetBoardListCtrl" class="button is-info">목록</a>
+							<a href="${path1 }/delProductCtrl?pid=${board1.pid }" class="button is-info">삭제</a>
+		
+							<a href="${path1 }/getProductListCtrl" class="button is-info">목록</a>
 						</td>
 					</tr>
 				</tbody>

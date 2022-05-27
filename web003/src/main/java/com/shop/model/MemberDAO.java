@@ -201,7 +201,7 @@ public class MemberDAO {
 		MemberVO member = new MemberVO();
 		try {
 			conn = JDBCConnection.getConnection();
-			sql = "select mid, mpw, memail, mtel, addr1, addr2, postcode, to_char(regdate, 'yyyy-MM-dd HH24:mi:ss') as cdate from member where mid=?";
+			sql = "select * from member where mid=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, uid);
 			rs = pstmt.executeQuery();

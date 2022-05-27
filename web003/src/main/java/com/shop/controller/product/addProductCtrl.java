@@ -25,7 +25,7 @@ public class addProductCtrl extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		String pid = request.getParameter("pid");
+		int pid = Integer.parseInt(request.getParameter("pid"));
 		String cate_id = request.getParameter("cate_id");
 		String pname = request.getParameter("pname");
 		int pprice = Integer.parseInt(request.getParameter("pprice"));
@@ -44,10 +44,11 @@ public class addProductCtrl extends HttpServlet {
 		
 		ProductDAO dao = new ProductDAO();
 		int cnt = dao.addProduct(vo);
+		System.out.println(pid+cate_id+pname+pprice+pcontent+pamount+pimg);
 		if(cnt>0) { //등록 성공
-			
+			response.sendRedirect("getProductListCtrl");
 		} else {  //등록 실패
-			
+			response.sendRedirect("index.jsp");
 		}			
 		}
 		

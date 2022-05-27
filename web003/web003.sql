@@ -36,7 +36,7 @@ select * from member;
 commit;
 
 create table product(
-pid varchar2(10) primary key,
+pid number primary key,
 cate_id varchar2(10) not null,
 pname varchar2(100) not null,
 pprice number not null,
@@ -45,3 +45,11 @@ pamount number not null,
 pimg varchar2(300) not null,
 regdate date default sysdate,
 best number);
+
+insert into product values (100001,'A','닭꼬치',4500,'닭꼬치입니다',20,'./img/1234.png',sysdate,0);
+insert into product values (100002,'A','프리미엄닭꼬치',6500,'프리미엄닭꼬치입니다',20,'./img/12345.png',sysdate,0);
+select * from product;
+drop table product
+
+
+

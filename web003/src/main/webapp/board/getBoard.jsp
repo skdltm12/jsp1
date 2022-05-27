@@ -22,38 +22,34 @@
 					<tr>
 						<th>제목</th>
 						<td>
-						<c:if test="${sid=='admin' }">
-							<input type="text" name="title" value="${board.title }">
+		
 				
-						</c:if>
-						<c:if test="${sid=='admin' }">
+		
+			
 							<p>${board.title }</p>
-						</c:if>
-							<input type="hidden" name="seq" value="${board.seq }">
+				
+			
 						</td>
 					</tr>
 					<tr>
 						<th>작성자</th>
 						<td>
-						<c:if test="${sid=='admin' }">
-							<input type="text" name="nickname" value="${board.nickname }">
-						</c:if>
-											<c:if test="${sid=='admin' }">
+				
+				
+			
+							
 							<p>${board.nickname }</p>
-		</c:if>
+	
 						</td>
 						
 					</tr>
 					<tr>
 						<th>내용</th>
 						<td>
-								<c:if test="${sid=='admin' }">
-							<textarea cols="100" rows ="7" name="content">${board.content }</textarea>
-				
-			</c:if>
-								<c:if test="${sid=='admin' }">
+
+						
 							<p>${board.content }</p>
-		</c:if>
+	
 						</td>
 					</tr>
 					<tr>

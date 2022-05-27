@@ -40,22 +40,22 @@
 		<thead>
 			<tr>
 				<th class="item1">번호</th>
-				<th class="item2">제목</th>
-				<th class="item3">작성자</th>
-				<th class="item4">작성일</th>
+				<th class="item2">이름</th>
+				<th class="item3">수량</th>
+				<th class="item4">가격</th>
 			</tr>
 		</thead>
 		<tbody>
 		<c:forEach items="${list }" var="vo" varStatus="status">
 			<tr>
-				<td>${status.count }</td>
-				<td><a href="../GetBoardCtrl?num=${vo.seq }">${vo.title }</a></td>
-				<td>${vo.nickname }</td>
-				<td>${vo.regdate }</td>
+				<td>${vo.cate_id }${vo.pid }</td>
+				<td><a href="../getProductCtrl?num=${vo.pid }">${vo.pname }</a></td>
+				<td>${vo.pamount }</td>
+				<td>${vo.pprice }</td>
 			</tr>
 		</c:forEach>
 			<tr>
-				<td colspan="4"><a href="${path }/board/addBoardForm.jsp">글 등록</a></td>
+				<td colspan="4"><a href="${path }/product/addProduct.jsp">글 등록</a></td>
 			</tr>	
 		</tbody>
 	</table>

@@ -3,7 +3,7 @@ package com.shop.common;
 import java.util.Date;
 
 public class ProductVO {
-	private String pid;
+	private int pid;
 	private String cate_id;
 	private String pname;
 	private int pprice;
@@ -12,10 +12,11 @@ public class ProductVO {
 	private String pimg;
 	private Date regdate;
 	private int best;
-	public String getPid() {
+
+	public int getPid() {
 		return pid;
 	}
-	public void setPid(String pid) {
+	public void setPid(int pid) {
 		this.pid = pid;
 	}
 	public String getCate_id() {

@@ -17,6 +17,6 @@
     <fullyQualifiedTypeName name="com.shop.common.BoardVO"/>
     <fullyQualifiedTypeName name="com.mysql.cj.x.protobuf.MysqlxExpect.Open.Condition"/>
     <fullyQualifiedTypeName name="java.util.Base64"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="com.shop.common.ProductVO"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

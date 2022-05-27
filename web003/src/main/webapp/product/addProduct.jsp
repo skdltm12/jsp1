@@ -65,7 +65,7 @@
 						<td colspan="2">
 							<input type="submit" value="등록" class="button is-info"/>
 							<input type="reset" value="취소" class="button is-info"/>
-							<a href="${path1 }/GetBoardListCtrl" class="button is-info">목록</a>
+							<a href="${path1 }/getProductListCtrl" class="button is-info">목록</a>
 						</td>
 					</tr>
 				</tbody>
