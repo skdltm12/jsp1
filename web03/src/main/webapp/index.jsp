@@ -1,24 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인 페이지</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+<title>메인</title>
 <style>
+.navbar-link:not(.is-arrowless)::after {content:none;}
 </style>
 </head>
 <body>
-<div class="container">
-<header id="hd">
-	<%@ include file="hd.jsp" %>
-</header>
-<div id="content">
+<jsp:include page="header.jsp"></jsp:include>
+<div id="content" class="panel-body">
+	<h2>메인 페이지</h2>
 
 </div>
-<footer id="ft">
-	<%@ include file="ft.jsp" %>
-</footer>
-</div>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
